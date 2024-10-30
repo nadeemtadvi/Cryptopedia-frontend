@@ -13,14 +13,14 @@ const Register = () => {
   });
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const formData =new FormData();
-    formData.append('FullName',value.fullname)
-    formData.append('email',value.email)
-    formData.append('password',value.password)
-    formData.append('profile',value.image)
+    const formData = new FormData();
+    formData.append("FullName", value.fullname);
+    formData.append("email", value.email);
+    formData.append("password", value.password);
+    formData.append("profile", value.image);
 
     try {
-      const res = await post("/auth/register", formData,{
+      const res = await post("/auth/register", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -31,6 +31,8 @@ const Register = () => {
         console.log(data.message);
         navigate("/login");
         toast.success(data.message);
+      } else {
+        toast.error(data.message || "An  error occurred.");
       }
       console.log("register API", data);
     } catch (error) {
@@ -43,10 +45,12 @@ const Register = () => {
   };
   const handleImageChange = (e) => {
     const file = e.target.files[0];
-    setValue({
-      ...value,
-      image: file,
-    });
+    if (file) {
+      setValue({
+        ...value,
+        image: file,
+      });
+    }
   };
 
   return (
