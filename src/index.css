@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif,
+    "Trebuchet MS";
+}
+/* -apple-system,   BlinkMacSystemFont,   Roboto,  Oxygen, Ubuntu, Cantarell*/
+
+.bg-cover {
+  background-image: url("https://img.freepik.com/free-photo/view-beautiful-rainbow-nature-landscape_23-2151597605.jpg?t=st=1729630832~exp=1729634432~hmac=ea51820ea1b6f14315e2a088e17604085881c4a1883bcf8d90c7f676ff3a4a22&w=826");
+}
+
+.text-ellips {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: justify;
+}
