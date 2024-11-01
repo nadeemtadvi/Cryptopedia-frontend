@@ -1,8 +1,8 @@
 
 import axios from "axios";
 
-export const BaseUrl = 'https://cryptopedia-backend.onrender.com';
-// export const BaseUrl = 'http://localhost:5000';
+// export const BaseUrl = 'https://cryptopedia-backend.onrender.com';
+export const BaseUrl = 'http://localhost:5000';
 
 const instance = axios.create({
     baseURL: BaseUrl,
