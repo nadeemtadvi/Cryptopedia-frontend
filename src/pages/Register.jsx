@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { post } from "../services/Endpoint";
-
+import staticImg from "../assets/CryptoImg/43952.jpg";
 const Register = () => {
   const navigate = useNavigate();
   const [value, setValue] = useState({
@@ -56,66 +56,65 @@ const Register = () => {
   return (
     <div className="max-w-screen-2xl mx-auto">
       {" "}
-      <div className="flex items-center justify-center min-h-screen bg-gray-100">
-        <div className="bg-white p-8 rounded-lg shadow-lg w-96">
-          <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">
+      <div className=" grid grid-cols-[40%_auto] pb-10">
+        <div className=" p-6">
+          <h2 className="text-2xl font-semibold  text-gray-800 mb-4">
             Create an account
           </h2>
 
           <form onSubmit={handleSubmit}>
             {/* Profile Picture placeholder */}
             <div className="mb-4">
-              <div className="flex justify-center ">
+              <div className=" ">
                 <img
                   // src="https://img.freepik.com/free-photo/artist-white_1368-3543.jpg?t=st=1729824641~exp=1729828241~hmac=55a2a499d4aa27410a389f16720acf05aa70ebc9e3e3c0257ba502d6ba3a52b5&w=740"
                   src={
                     value.image
                       ? URL.createObjectURL(value.image)
-                      : "https://via.placeholder.com/150"
+                      : ""
                   }
-                  className="object-cover w-20 h-20 rounded-full cursor-pointer"
+                  className="object-cover w-20 h-20 rounded-full cursor-pointer  bg-gray-200"
                   onClick={handleImageClick}
                 />
               </div>
               <input
                 type="file"
-                className="form-control d-none" // Hide the file input
+                className="form-control d-none mt-4  text-gray-900 border border-gray-300 rounded cursor-pointer bg-gray-50" // Hide the file input
                 id="image"
+                placeholder="Upload image"
                 accept="image/*"
                 onChange={handleImageChange}
               />
+              
+
             </div>
 
             <div className="mb-4">
-              <label className="block text-gray-600 mb-2" htmlFor="fullName">
-                Full Name
-              </label>
+             
               <input
                 type="text"
                 id="fullName"
-                placeholder="John Doe"
+                placeholder="Full Name"
                 value={value.fullname}
                 onChange={(e) =>
                   setValue({ ...value, fullname: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
             </div>
 
             <div className="mb-4">
-              <label className="block text-gray-600 mb-2" htmlFor="email">
-                Email
-              </label>
+           
               <div className="relative">
                 <input
                   type="email"
                   id="email"
-                  placeholder="name@company.com"
+                  placeholder="example@company.com"
                   value={value.email}
                   onChange={(e) =>
                     setValue({ ...value, email: e.target.value })
                   }
-                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                   <svg
@@ -137,18 +136,16 @@ const Register = () => {
             </div>
 
             <div className="mb-6">
-              <label className="block text-gray-600 mb-2" htmlFor="password">
-                Password
-              </label>
+            
               <input
                 type="password"
                 id="password"
-                placeholder="********"
+                placeholder="Password***"
                 value={value.password}
                 onChange={(e) =>
                   setValue({ ...value, password: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
             </div>
 
@@ -168,6 +165,9 @@ const Register = () => {
               </Link>
             </p>
           </div>
+        </div>
+        <div>
+        <img src={staticImg} alt="" />
         </div>
       </div>
     </div>

@@ -29,6 +29,8 @@ function App() {
             <Route path="/about" element={<About />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/blog" element={<Blog />}></Route>
+            <Route path="/login" element={<Login />}></Route>
+            <Route path="/register" element={<Register />}></Route>
           </Route>
           <Route path="/dashboard" element={<AdminLayout />}>
             <Route index element={<Dashboard />} />
@@ -36,8 +38,7 @@ function App() {
             <Route path="allpost" element={<Allpost />} />
             <Route path="user" element={<User />} />
           </Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/register" element={<Register />}></Route>
+       
         </Routes>
       </BrowserRouter>
     </>

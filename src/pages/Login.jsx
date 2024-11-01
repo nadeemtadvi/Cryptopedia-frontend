@@ -39,26 +39,20 @@ const dispatch=useDispatch()
 
   return (
     <div>
-      <div className="flex items-center justify-center min-h-screen bg-gray-100 max-w-screen-2xl mx-auto">
-        <div className="bg-white p-8 rounded-lg shadow-lg w-96">
+      <div className="max-w-screen-2xl mx-auto   bg-coverr">
+        <div className="">
+         
+        <div className="p-5 w-[35%] mx-auto my-[6rem]">
           {/* Logo */}
-          <div className="flex justify-center mb-6">
-            <img
-              src="/path/to/logo.png" // Replace with your logo path
-              alt="CodeByZahid"
-              className="h-12"
-            />
-          </div>
+       
 
-          <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">
-            Sign in to your account
+          <h2 className="text-2xl font-semibold  text-gray-800 mb-6">
+            Sign in 
           </h2>
 
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label className="block text-gray-600 mb-2" htmlFor="email">
-                Your email
-              </label>
+             
               <div className="relative">
                 <input
                   type="email"
@@ -89,9 +83,7 @@ const dispatch=useDispatch()
             </div>
 
             <div className="mb-6">
-              <label className="block text-gray-600 mb-2" htmlFor="password">
-                Password
-              </label>
+             
               <input
                 type="password"
                 id="password"
@@ -119,6 +111,8 @@ const dispatch=useDispatch()
               </Link>
             </p>
           </div>
+        </div>
+       
         </div>
       </div>
     </div>
