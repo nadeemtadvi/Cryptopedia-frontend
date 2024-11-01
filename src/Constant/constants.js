@@ -5,5 +5,6 @@ NAVITEMS : [
     {label:'About',link:'about'},
     {label:'Contact',link:'contact'},
 ],
-NAV_LOGO : 'Crptopedia'
+NAV_LOGO : 'Crpto',
+NAV_LOGO_H : 'pedia'
 }

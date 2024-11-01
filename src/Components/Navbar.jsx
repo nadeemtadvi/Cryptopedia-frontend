@@ -4,6 +4,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { BaseUrl, post } from "../services/Endpoint";
 import { removeUser } from "../redux/AuthSlice";
 import toast from "react-hot-toast";
+import { HiMenu } from "react-icons/hi";
 import { navbar } from "../Constant/constants";
 
 const Navbar = () => {
@@ -31,16 +32,19 @@ const handleToggle = () => {
     }
   };
   return (
-    <div className="max-w-screen-2xl mx-auto bg-white    p-4">
+    <div className="max-w-screen-2xl mx-auto bg-white p-2 sm:p-4">
       <div className="flex justify-between items-center">
-        <div>
+        <div className="flex sm:block items-center gap-2">
+          <div className="sm:hidden block">
+            <HiMenu className="text-[27px]"/>
+          </div>
           <Link to={"/"}>
-            <div className="text-black font-bold text-[1.5rem]">
-              {navbar.NAV_LOGO}
+            <div className="text-black font-bold text-[1.5rem] uppercase">
+              <span className="text-[#EB5B00]">{navbar.NAV_LOGO}</span><span className="text-[#FFB200]">{navbar.NAV_LOGO_H}</span>
             </div>
           </Link>
         </div>
-        <div>
+        <div className="hidden sm:block">
           <ul className="flex justify-between items-center gap-8 text-black">
             {navbar.NAVITEMS.map((item, index) => (
               <li key={index}>

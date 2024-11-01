@@ -6,15 +6,14 @@ const Home = () => {
     <>
       <div className="max-w-screen-2xl mx-auto">
         
-
-        <div className="max-w-[85%] mx-auto ">
-        <div className="flex justify-between items-center">
-          <div className="my-10 text-center  text-[1.6rem] text-black font-medium">
+        <div className="p-2 sm:p-0 sm:max-w-[85%] mx-auto ">
+        <div className="sm:flex justify-between items-center">
+          <div className="my-5 sm:my-10 text-center  text-[1.25rem] sm:text-[1.6rem] text-black font-medium">
             <span className="border-b border-orange-500 py-2 px-3">
               Latest Post
             </span>
           </div>
-          <form className="">
+          <form className="my-4 sm:my-0">
             <div className="relative">
               <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                 <svg

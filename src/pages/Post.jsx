@@ -60,13 +60,14 @@ useEffect(() => {
   return (
     <div className="max-w-screen-2xl mx-auto ">
       <div className="mt-[4rem]  text-black">
-        <h3 className="text-[2rem] font-medium">{onPosts && onPosts?.title}</h3>
-        <div className="max-w-screen-lg mx-auto mt-[1rem]">
-          <div className="blog-cover  overflow-hidden rounded-[6px]">
+        <div className=" p-2 sm:p-0 sm:max-w-[70%] mx-auto mt-[1rem]">
+        <h3 className="text-[1.42rem] sm:text-[2rem] font-medium">{onPosts && onPosts?.title}</h3>
+          <div className="blog-cover  overflow-hidden rounded-[6px] sm:h-[386px] w-full">
             <img
               // src="https://img.freepik.com/free-photo/monstera-plant-green-pot_53876-145188.jpg?t=st=1729632583~exp=1729636183~hmac=8c19e3b3dd239db1617b974e750a5530dcfa025592b4f55971a62b54ca1ca5fc&w=740"
              src={onPosts && `${BaseUrl}/images/${onPosts.image}`}
               alt=""
+              className="object-fill"
             />
           </div>
           <div className="my-[1rem]">
@@ -76,7 +77,7 @@ useEffect(() => {
           </div>
           <hr />
           <div className="my-[1rem]">
-            <h5 className="text-[1.6rem] mb-3 font-medium">Leave a comment</h5>
+            <h5 className="text-[1.25rem] sm:text-[1.6rem] mb-3 font-medium">Leave a comment</h5>
             <form className="" action="" >
               <div>
                 <div>
@@ -84,7 +85,7 @@ useEffect(() => {
                 </div>
 
                 <textarea
-                  className="my-2 w-full rounded-[6px] p-3"
+                  className="my-2 w-full rounded-[6px] p-3 border border-gray-300"
                   name=""
                   id=""
                   rows="4"
@@ -102,7 +103,7 @@ useEffect(() => {
               </button>
             </form>
             <hr className="my-5" />
-            <h5 className="text-[1.6rem] mb-3 font-medium">comments</h5>
+            <h5 className="text-[1.25rem] sm:text-[1.6rem] mb-3 font-medium">comments</h5>
             {onPosts && onPosts.comments.map((comment) => {
               return(
                 <div className="my-3">
