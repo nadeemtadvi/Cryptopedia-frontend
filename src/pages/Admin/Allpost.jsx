@@ -45,19 +45,19 @@ const Allpost = () => {
   }, [loadedata]);
 
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(18rem,1fr))] gap-[20px] p-5">
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(18rem,1fr))] gap-[12px] sm:!pt-0 sm:p-5">
       {" "}
       {post &&
         post.map((item) => {
           return (
             <div key={item.id} className="">
-              <div className="max-w-sm bg-white rounded-[6px] border border-gray-300 p-3  overflow-hidden">
+              <div className="max-w-sm bg-white  border border-gray-300 p-1.5 sm:p-2  overflow-hidden">
                 <img
                   src={`${BaseUrl}/images/${item.image}`}
                   alt="Blog"
-                  className="w-full h-[200px] object-fit rounded-[6px]"
+                  className="w-full h-[160px] sm:h-[200px] object-fit "
                 />
-                <div className="py-2">
+                <div className="mt-2 sm:mt-0 sm:py-2">
                   <h3 className="text-[18px] font-semibold text-gray-900">
                     {item.title}
                   </h3>
@@ -65,7 +65,7 @@ const Allpost = () => {
                   <div className="flex justify-between">
                     <button
                       onClick={() => handleDelete(item._id)}
-                      className="bg-red-500 hover:bg-red-700 text-white p-[3px_16px_4px] rounded-[6px] flex items-center"
+                      className="bg-red-500 hover:bg-red-700 text-white p-[3px_16px_4px]  flex items-center"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ const Allpost = () => {
                     </button>
                     <button
                       onClick={() => handleUpdate(item._id)}
-                      className="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold p-[3px_16px_4px] rounded-[6px] flex items-center"
+                      className="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold p-[3px_16px_4px]  flex items-center"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

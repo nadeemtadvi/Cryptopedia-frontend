@@ -9,8 +9,7 @@
 }
 
 body {
-  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif,
-    "Trebuchet MS";
+  font-family: Arial, sans-serif,   "Trebuchet MS";
 }
 /* -apple-system,   BlinkMacSystemFont,   Roboto,  Oxygen, Ubuntu, Cantarell*/
 
@@ -25,4 +24,9 @@ body {
   overflow: hidden;
   text-align: justify;
 }
-
+@media screen and (max-width:560px) {
+  .footer-icon img {
+    width: 16px;
+    
+  }
+}

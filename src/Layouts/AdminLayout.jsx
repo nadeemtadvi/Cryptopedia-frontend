@@ -19,9 +19,9 @@ const AdminLayout = () => {
   return (
     <>
       <Navbar />
-      <div className="flex">
+      <div className="sm:flex">
         <Sidebar />
-        <div className="grow p-4">
+        <div className="grow p-2 sm:p-4">
           <Outlet />
         </div>
       </div>

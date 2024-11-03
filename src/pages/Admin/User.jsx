@@ -70,7 +70,7 @@ const User = () => {
                     <td className="px-4 py-2">{user.email}</td>
                     <td className="px-4 py-2">
                       <button
-                        className="bg-red-500 hover:bg-red-700 text-white  py-1 px-3 rounded-[6px] flex items-center"
+                        className="bg-red-500 hover:bg-red-700 text-white  py-1 px-3 rounded-[0px] flex items-center"
                         onClick={() => handleDelete(user._id)}
                       >
                         <svg

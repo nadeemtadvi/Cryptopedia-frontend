@@ -79,7 +79,7 @@ const Register = () => {
               </div>
               <input
                 type="file"
-                className="form-control d-none mt-4  text-gray-900 border border-gray-300 rounded cursor-pointer bg-gray-50" // Hide the file input
+                className="form-control d-none mt-4  text-gray-900 border border-gray-300  cursor-pointer bg-gray-50" // Hide the file input
                 id="image"
                 placeholder="Upload image"
                 accept="image/*"
@@ -99,7 +99,7 @@ const Register = () => {
                 onChange={(e) =>
                   setValue({ ...value, fullname: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
             </div>
 
@@ -114,7 +114,7 @@ const Register = () => {
                   onChange={(e) =>
                     setValue({ ...value, email: e.target.value })
                   }
-                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                   <svg
@@ -145,13 +145,13 @@ const Register = () => {
                 onChange={(e) =>
                   setValue({ ...value, password: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded"
+              className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold "
             >
               Sign up
             </button>

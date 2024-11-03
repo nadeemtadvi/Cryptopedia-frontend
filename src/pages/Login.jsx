@@ -61,7 +61,7 @@ const dispatch=useDispatch()
                   value={value.email}
                   onChange={handleChange}
                   placeholder="name@company.com"
-                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500"
+                  className="w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring focus:ring-blue-500"
                 />
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                   <svg
@@ -91,13 +91,13 @@ const dispatch=useDispatch()
                 value={value.password}
                 onChange={handleChange}
                 placeholder="********"
-                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring focus:ring-blue-500"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded"
+              className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold "
             >
               Sign in
             </button>

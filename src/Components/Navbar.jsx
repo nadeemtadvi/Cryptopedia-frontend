@@ -56,7 +56,7 @@ const handleToggle = () => {
         <div>
           {!user ? (
             <Link to={"/login"}>
-              <button className="p-[5px_28px_6px]    bg-indigo-700 rounded-[6px] text-white font-semibold ">
+              <button className="p-[5px_28px_6px]    bg-indigo-700  text-white font-semibold ">
                 Sign in
               </button>
             </Link>
@@ -68,14 +68,14 @@ const handleToggle = () => {
                 type="button"
                 data-dropdown-toggle="userDropdown"
                 data-dropdown-placement="bottom-start"
-                className="w-12 h-12 rounded-full cursor-pointer object-cover"
+                className="w-9 h-9 sm:w-12 sm:h-12 rounded-full cursor-pointer object-cover"
                 src={`${BaseUrl}/images/${user.profile}`}
                 alt="User dropdown"
               />
               {toggle && 
               <div
                 id="userDropdown"
-                className="z-10  absolute translate-x-[-122px] translate-y-[26px] bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                className="z-10  absolute translate-x-[-122px] translate-y-[26px] bg-white divide-y divide-gray-100  shadow w-44 "
               >
                 <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
                   <div>{user.FullName}</div>
@@ -90,7 +90,7 @@ const handleToggle = () => {
                     <li>
                       <Link
                         to={"/dashboard"}
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        className="block px-4 py-2 hover:bg-gray-100 "
                       >
                         Dashboard
                       </Link>
@@ -102,7 +102,7 @@ const handleToggle = () => {
                   <li>
                     <Link
                       to={`/profile/${id}`}
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-gray-100 "
                     >
                       Profile
                     </Link>
@@ -111,7 +111,7 @@ const handleToggle = () => {
                 <div className="py-1">
                   <Link
                     onClick={handleLogout}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
                   >
                     Sign out
                   </Link>

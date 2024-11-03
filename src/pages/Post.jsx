@@ -62,7 +62,7 @@ useEffect(() => {
       <div className="mt-[4rem]  text-black">
         <div className=" p-2 sm:p-0 sm:max-w-[70%] mx-auto mt-[1rem]">
         <h3 className="text-[1.42rem] sm:text-[2rem] font-medium">{onPosts && onPosts?.title}</h3>
-          <div className="blog-cover  overflow-hidden rounded-[6px] sm:h-[386px] w-full">
+          <div className="blog-cover  overflow-hidden  sm:h-[386px] w-full">
             <img
               // src="https://img.freepik.com/free-photo/monstera-plant-green-pot_53876-145188.jpg?t=st=1729632583~exp=1729636183~hmac=8c19e3b3dd239db1617b974e750a5530dcfa025592b4f55971a62b54ca1ca5fc&w=740"
              src={onPosts && `${BaseUrl}/images/${onPosts.image}`}
@@ -85,7 +85,7 @@ useEffect(() => {
                 </div>
 
                 <textarea
-                  className="my-2 w-full rounded-[6px] p-3 border border-gray-300"
+                  className="my-2 w-full  p-3 border border-gray-300"
                   name=""
                   id=""
                   rows="4"
@@ -97,7 +97,7 @@ useEffect(() => {
               <button
                 type="submit"
                 onClick={onSubmitComment}
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-[6px] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 Submit Comment
               </button>

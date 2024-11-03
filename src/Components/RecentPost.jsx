@@ -26,25 +26,25 @@ const RecentPost = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-[repeat(_auto-fit,minmax(18rem,1fr)_)] gap-5 mb-24">
+      <div className="grid grid-cols-[repeat(_auto-fit,minmax(18rem,1fr)_)] gap-3 mb-24">
         {post &&
           post.map((post, index) => {
             return (
               <div
                 key={index}
-                className=" bg-white border border-gray-200 rounded-[6px] p-3 "
+                className=" bg-white border border-gray-200  p-2 sm:p-2.5 "
               >
-                <div className=" rounded-[6px] ">
+                <div className="  ">
                   <a href="#">
                     <img
-                      className="rounded-[6px] h-[200px] w-full object-fit "
+                      className=" h-[160px] sm:h-[200px] w-full object-fit "
                       src={`${BaseUrl}/images/${post.image}`}
                       alt=""
                     />
                   </a>
                 </div>
                 <div className="">
-                  <button className="mt-3  font-medium text-[15px] text-orange-600  rounded-[6px]">
+                  <button className="mt-3  font-medium text-[15px] text-orange-600  ">
                     Crypto Coin
                   </button>
                   <div

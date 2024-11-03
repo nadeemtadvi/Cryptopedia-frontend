@@ -45,7 +45,7 @@ const Addpost = () => {
       <div className="flex justify-center items-center ">
         <form
           onSubmit={handleSubmit}
-          className="w-full max-w-lg bg-white rounded-[4px] border border-gray-200 shadow-md p-4"
+          className="w-full max-w-lg bg-white  border border-gray-200 shadow-md p-2 sm:p-4"
         >
           <h2 className="text-xl font-medium text-center text-black mb-4">
             Add New Post
@@ -62,7 +62,7 @@ const Addpost = () => {
               type="file"
               id="image"
               onChange={(e) => setImage(e.target.files[0])}
-              className="w-full  border overflow-hidden  rounded-[4px] border-gray-300 text-gray-400"
+              className="w-full  border overflow-hidden   border-gray-300 text-gray-400"
             />
           </div>
 
@@ -79,7 +79,7 @@ const Addpost = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Enter post title"
-              className="w-full px-3 py-2 border rounded-[4px] border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-600"
+              className="w-full px-3 py-2 border  border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-600"
             />
           </div>
 
@@ -95,12 +95,12 @@ const Addpost = () => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Write your post description here"
-              className="w-full px-3 py-2 border rounded-[4px] border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-600"
+              className="w-full px-3 py-2 border  border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-600"
               rows="4"
             />
           </div>
 
-          <button className="w-full bg-blue-600 text-white py-2 rounded-[4px] font-medium hover:bg-blue-700">
+          <button className="w-full bg-blue-600 text-white py-2  font-medium hover:bg-blue-700">
             Submit
           </button>
         </form>
