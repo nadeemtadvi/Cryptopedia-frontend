@@ -51,7 +51,7 @@ const Allpost = () => {
         post.map((item) => {
           return (
             <div key={item.id} className="">
-              <div className="max-w-sm bg-white  border border-gray-300 p-1.5 sm:p-2  overflow-hidden">
+              <div className="max-w-sm bg-white  border border-gray-200 p-1.5 sm:p-2  overflow-hidden">
                 <img
                   src={`${BaseUrl}/images/${item.image}`}
                   alt="Blog"
@@ -65,7 +65,7 @@ const Allpost = () => {
                   <div className="flex justify-between">
                     <button
                       onClick={() => handleDelete(item._id)}
-                      className="bg-red-500 hover:bg-red-700 text-white p-[3px_16px_4px]  flex items-center"
+                      className="bg-[#E4003A] hover:bg-red-700 text-white p-[3px_16px_4px]  flex items-center"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -79,11 +79,11 @@ const Allpost = () => {
                           clipRule="evenodd"
                         />
                       </svg>
-                      Delete
+                      Delete hi
                     </button>
                     <button
                       onClick={() => handleUpdate(item._id)}
-                      className="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold p-[3px_16px_4px]  flex items-center"
+                      className="bg-[#FFB200] hover:bg-[#ffc53e] text-white font-semibold p-[3px_16px_4px]  flex items-center"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

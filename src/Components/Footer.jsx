@@ -6,7 +6,7 @@ import git from '../assets/Icon/github.png'
 
 const Footer = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto border-t border-gray-300">
+    <div className="max-w-screen-2xl mx-auto border-t border-gray-200">
     <div className="p-1.5 sm:p-5 flex justify-between items-center">
       <h4 className="text-[0.65rem] sm:text-[0.8rem] text-subtext">@ 2024 All Rights Reserved</h4>
       <h4 className="text-[0.65rem] sm:text-[0.8rem] text-subtext">Designed by Nadeem</h4>

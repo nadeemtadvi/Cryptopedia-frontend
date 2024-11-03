@@ -19,10 +19,25 @@ body {
 
 .text-ellips {
   display: -webkit-box;
+  -webkit-box-orient: vertical;  
   -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
   overflow: hidden;
+  text-overflow: ellipsis; 
+  height: calc(4 * 1.2em); 
   text-align: justify;
+}
+
+
+
+.tox:not(.tox-tinymce-inline) .tox-editor-header {
+    border-bottom: 1px solid #e5e7eb!important;
+    box-shadow: none!important;
+  }
+.tox-tinymce{
+  border: 1px solid #e5e7eb!important;
+}
+.tox-tinymce ,.tox .tox-edit-area::before {
+  border-radius: 0px!important;
 }
 @media screen and (max-width:560px) {
   .footer-icon img {

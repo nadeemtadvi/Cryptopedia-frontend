@@ -61,7 +61,7 @@ const dispatch=useDispatch()
                   value={value.email}
                   onChange={handleChange}
                   placeholder="name@company.com"
-                  className="w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring focus:ring-blue-500"
+                  className="w-full px-4 py-2 border border-gray-200  focus:outline-none focus:ring focus:ring-blue-500"
                 />
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                   <svg
@@ -91,7 +91,7 @@ const dispatch=useDispatch()
                 value={value.password}
                 onChange={handleChange}
                 placeholder="********"
-                className="w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-200  focus:outline-none focus:ring focus:ring-blue-500"
               />
             </div>
 

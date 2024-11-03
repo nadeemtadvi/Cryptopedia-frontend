@@ -56,8 +56,8 @@ const Register = () => {
   return (
     <div className="max-w-screen-2xl mx-auto">
       {" "}
-      <div className="sm:grid grid-cols-[40%_auto] pb-10">
-        <div className="px-3 py-6 sm:p-6">
+      <div className="sm:grid grid-cols-2 pb-10">
+        <div className="sm:ml-14 sm:mr-10 px-3 py-6 sm:p-6">
           <h2 className="text-2xl text-center sm:text-start font-semibold  text-gray-800 mb-4">
             Create an account
           </h2>
@@ -79,7 +79,7 @@ const Register = () => {
               </div>
               <input
                 type="file"
-                className="form-control d-none mt-4 text-[15.5px] w-[-webkit-fill-available] text-gray-900 border border-gray-300  cursor-pointer bg-gray-50" // Hide the file input
+                className="form-control d-none mt-4 text-[15.5px] w-[-webkit-fill-available] text-gray-900 border border-gray-200  cursor-pointer bg-gray-50" // Hide the file input
                 id="image"
                 placeholder="Upload image"
                 accept="image/*"
@@ -99,7 +99,7 @@ const Register = () => {
                 onChange={(e) =>
                   setValue({ ...value, fullname: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring-1 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-200  focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
             </div>
 
@@ -114,7 +114,7 @@ const Register = () => {
                   onChange={(e) =>
                     setValue({ ...value, email: e.target.value })
                   }
-                  className="w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="w-full px-4 py-2 border border-gray-200  focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                   <svg
@@ -145,7 +145,7 @@ const Register = () => {
                 onChange={(e) =>
                   setValue({ ...value, password: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring-1 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-200  focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
             </div>
 

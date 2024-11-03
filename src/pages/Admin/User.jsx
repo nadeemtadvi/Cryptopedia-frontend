@@ -49,7 +49,7 @@ const User = () => {
 
           <table className="w-full text-left">
             <thead>
-              <tr className=" text-black !font-medium border-b border-gray-300">
+              <tr className=" text-black !font-medium border-b border-gray-200">
                 <th className="px-4 py-2">#</th>
                 <th className="px-4 py-2">Name</th>
                 <th className="px-4 py-2">Role</th>
@@ -62,7 +62,7 @@ const User = () => {
                 Users.map((user, index) => (
                   <tr
                     key={user.id}
-                    className=" text-gray-700 border-b border-gray-300"
+                    className=" text-gray-700 border-b border-gray-200"
                   >
                     <td className="px-4 py-2">{index + 1}</td>
                     <td className="px-4 py-2">{user.FullName}</td>
@@ -70,7 +70,7 @@ const User = () => {
                     <td className="px-4 py-2">{user.email}</td>
                     <td className="px-4 py-2">
                       <button
-                        className="bg-red-500 hover:bg-red-700 text-white  py-1 px-3 rounded-[0px] flex items-center"
+                        className="bg-[#E4003A] hover:bg-red-700 text-white  py-1 px-3 rounded-[0px] flex items-center"
                         onClick={() => handleDelete(user._id)}
                       >
                         <svg

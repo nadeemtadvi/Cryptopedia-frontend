@@ -61,19 +61,18 @@ useEffect(() => {
     <div className="max-w-screen-2xl mx-auto ">
       <div className="mt-[4rem]  text-black">
         <div className=" p-2 sm:p-0 sm:max-w-[70%] mx-auto mt-[1rem]">
-        <h3 className="text-[1.42rem] sm:text-[2rem] font-medium">{onPosts && onPosts?.title}</h3>
+        <h3 className="text-[1.42rem] mb-3 sm:text-[2rem] font-medium">{onPosts && onPosts?.title}</h3>
           <div className="blog-cover  overflow-hidden  sm:h-[386px] w-full">
             <img
               // src="https://img.freepik.com/free-photo/monstera-plant-green-pot_53876-145188.jpg?t=st=1729632583~exp=1729636183~hmac=8c19e3b3dd239db1617b974e750a5530dcfa025592b4f55971a62b54ca1ca5fc&w=740"
              src={onPosts && `${BaseUrl}/images/${onPosts.image}`}
               alt=""
-              className="object-fill"
+              className="object-fill w-full"
             />
           </div>
           <div className="my-[1rem]">
-            <h5>
-            {onPosts && onPosts.desc}
-            </h5>
+          <div className="text-[1.3rem] font-normal" dangerouslySetInnerHTML={{ __html: onPosts?.desc }}></div>
+            {/* <h5 >            {onPosts && onPosts.desc}            </h5> */}
           </div>
           <hr />
           <div className="my-[1rem]">
@@ -85,7 +84,7 @@ useEffect(() => {
                 </div>
 
                 <textarea
-                  className="my-2 w-full  p-3 border border-gray-300"
+                  className="my-2 w-full  p-3 border border-gray-200"
                   name=""
                   id=""
                   rows="4"
