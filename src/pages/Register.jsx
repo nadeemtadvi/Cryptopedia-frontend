@@ -56,16 +56,16 @@ const Register = () => {
   return (
     <div className="max-w-screen-2xl mx-auto">
       {" "}
-      <div className=" grid grid-cols-[40%_auto] pb-10">
-        <div className=" p-6">
-          <h2 className="text-2xl font-semibold  text-gray-800 mb-4">
+      <div className="sm:grid grid-cols-[40%_auto] pb-10">
+        <div className="px-3 py-6 sm:p-6">
+          <h2 className="text-2xl text-center sm:text-start font-semibold  text-gray-800 mb-4">
             Create an account
           </h2>
 
           <form onSubmit={handleSubmit}>
             {/* Profile Picture placeholder */}
             <div className="mb-4">
-              <div className=" ">
+              <div className="text-center sm:text-start">
                 <img
                   // src="https://img.freepik.com/free-photo/artist-white_1368-3543.jpg?t=st=1729824641~exp=1729828241~hmac=55a2a499d4aa27410a389f16720acf05aa70ebc9e3e3c0257ba502d6ba3a52b5&w=740"
                   src={
@@ -73,13 +73,13 @@ const Register = () => {
                       ? URL.createObjectURL(value.image)
                       : ""
                   }
-                  className="object-cover w-20 h-20 rounded-full cursor-pointer  bg-gray-200"
+                  className="inline-block object-cover w-20 h-20 rounded-full cursor-pointer  bg-gray-200"
                   onClick={handleImageClick}
                 />
               </div>
               <input
                 type="file"
-                className="form-control d-none mt-4  text-gray-900 border border-gray-300  cursor-pointer bg-gray-50" // Hide the file input
+                className="form-control d-none mt-4 text-[15.5px] w-[-webkit-fill-available] text-gray-900 border border-gray-300  cursor-pointer bg-gray-50" // Hide the file input
                 id="image"
                 placeholder="Upload image"
                 accept="image/*"
@@ -166,7 +166,7 @@ const Register = () => {
             </p>
           </div>
         </div>
-        <div>
+        <div className="hidden sm:block">
         <img src={staticImg} alt="" />
         </div>
       </div>

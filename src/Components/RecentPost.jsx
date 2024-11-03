@@ -72,8 +72,7 @@ const RecentPost = () => {
                   </div>
                   <p className="mb-1 font-normal text-gray-700 dark:text-gray-400 text-ellips">
                     {post.desc}
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Dignissimos commodi quia.
+                   
                   </p>
                 </div>
                 <div className="my-3 grid grid-cols-[40px_auto] gap-2">

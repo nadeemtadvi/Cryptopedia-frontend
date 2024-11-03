@@ -42,11 +42,11 @@ const dispatch=useDispatch()
       <div className="max-w-screen-2xl mx-auto   bg-coverr">
         <div className="">
          
-        <div className="p-5 w-[35%] mx-auto my-[6rem]">
+        <div className="p-2.5 sm:p-5 sm:w-[35%] mx-auto my-[6rem]">
           {/* Logo */}
        
 
-          <h2 className="text-2xl font-semibold  text-gray-800 mb-6">
+          <h2 className="text-2xl font-semibold  text-gray-800 mb-4">
             Sign in 
           </h2>
 
@@ -82,7 +82,7 @@ const dispatch=useDispatch()
               </div>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-4">
              
               <input
                 type="password"
