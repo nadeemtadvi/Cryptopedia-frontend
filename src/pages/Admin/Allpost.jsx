@@ -61,7 +61,7 @@ const Allpost = () => {
                   <h3 className="text-[18px] font-semibold text-gray-900">
                     {item.title}
                   </h3>
-                  <p className="text-gray-700 text-[16px] mb-4 text-ellips">{item.desc}</p>
+                  <div className="text-gray-700 text-[16px] mb-4 text-ellips" dangerouslySetInnerHTML={{ __html: item?.desc }}></div>
                   <div className="flex justify-between">
                     <button
                       onClick={() => handleDelete(item._id)}
@@ -79,7 +79,7 @@ const Allpost = () => {
                           clipRule="evenodd"
                         />
                       </svg>
-                      Delete hi
+                      Delete 
                     </button>
                     <button
                       onClick={() => handleUpdate(item._id)}

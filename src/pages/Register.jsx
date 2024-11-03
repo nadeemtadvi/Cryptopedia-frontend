@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { post } from "../services/Endpoint";
 import staticImg from "../assets/CryptoImg/43952.jpg";
+import staticuser from "../assets/CryptoImg/imglog.jpg";
 const Register = () => {
   const navigate = useNavigate();
   const [value, setValue] = useState({
@@ -71,7 +72,7 @@ const Register = () => {
                   src={
                     value.image
                       ? URL.createObjectURL(value.image)
-                      : ""
+                      : staticuser
                   }
                   className="inline-block object-cover w-20 h-20 rounded-full cursor-pointer  bg-gray-200"
                   onClick={handleImageClick}
