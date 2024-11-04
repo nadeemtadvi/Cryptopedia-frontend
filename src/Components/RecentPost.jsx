@@ -2,17 +2,24 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BaseUrl, get } from "../services/Endpoint";
 import { useSelector } from "react-redux";
+import defaulimg from "../assets/CryptoImg/6244967.jpg";
 
-const RecentPost = () => {
+const RecentPost = ({searchQuery}) => {
   const navigate = useNavigate();
   const [post, setPost] = useState([]);
   const user = useSelector((state) => state.auth.user);
   
-  const formattedDate = new Date(user.createdAt).toLocaleDateString("en-US", {
+  const filteredPosts = post.filter((p) =>
+    p.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+console.log("filteredPosts",filteredPosts);
+
+  const formattedDate =  user?.createdAt 
+  ? new Date(user.createdAt).toLocaleDateString("en-US", {
     year: "numeric",
     month: "short",
     day: "2-digit",
-  });
+  }) : "Date not available";
 
   const handleNavigate = (id) => {
     navigate(`/post/${id}`);
@@ -35,12 +42,12 @@ const RecentPost = () => {
   return (
     <div>
       <div className="grid grid-cols-[repeat(_auto-fit,minmax(18rem,1fr)_)] gap-3 mb-24">
-        {post &&
-          post.map((post, index) => {
+        {filteredPosts.length > 0 ? 
+        (  filteredPosts.map((post, index) => {
             return (
               <div
                 key={index}
-                className=" bg-white border border-gray-200  p-2 sm:p-2.5 "
+                className={`${searchQuery ? 'md:w-[400px]':''} bg-white border border-gray-200  p-2 sm:p-2.5 `}
               >
                 <div className="  ">
                   <a href="#">
@@ -87,15 +94,15 @@ const RecentPost = () => {
                   <div className="">
                     <div className=" w-[40px] h-[40px] ">
                       <img
-                        className="object-cover rounded-full"
-                        src={`${BaseUrl}/images/${user.profile}`}
-                        alt=""
+                        className="object-cover w-full h-full rounded-full"
+                        src={user?.profile ? `${BaseUrl}/images/${user.profile}` : defaulimg} 
+                        alt={user?.FullName || "User profile"}
                       />
                     </div>
                   </div>
                   <div className="self-center">
                     <h3 className="text-[13px] font-medium text-black">
-                      {user.FullName}
+                      {user?.FullName || "NA"}
                     </h3>
                     <h3 className="text-gray-600 text-[12px] ">
                       {formattedDate}
@@ -104,7 +111,7 @@ const RecentPost = () => {
                 </div>
               </div>
             );
-          })}
+          })) : (<p>No post Found</p>)}
       </div>
     </div>
   );

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import RecentPost from "../Components/RecentPost";
 
 const Home = () => {
+  const [searchQuery, setSearchQuery] = useState("");
   return (
     <>
       <div className="max-w-screen-2xl mx-auto">
-        
         <div className="p-2 sm:p-0 sm:max-w-[85%] mx-auto ">
         <div className="sm:flex justify-between items-center">
           <div className="my-5 sm:my-10 text-center  text-[1.25rem] sm:text-[1.6rem] text-black font-medium">
@@ -35,16 +35,17 @@ const Home = () => {
               <input
                 type="search"
                 id="default-search"
-                className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-200  focus:ring-blue-500 focus:border-blue-500 outline-none"
+                className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-200  focus:ring-[#001beb] focus:border-[#001beb] outline-none"
                 placeholder="Search"
                 required=""
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
           </form>
         </div>
-      
           <div>
-            <RecentPost />
+            <RecentPost searchQuery={searchQuery} />
           </div>
         </div>
       </div>

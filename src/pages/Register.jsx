@@ -100,7 +100,7 @@ const Register = () => {
                 onChange={(e) =>
                   setValue({ ...value, fullname: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-200  focus:outline-none focus:ring-1 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-200  focus:outline-none focus:ring-1 focus:ring-[#001beb]"
               />
             </div>
 
@@ -115,7 +115,7 @@ const Register = () => {
                   onChange={(e) =>
                     setValue({ ...value, email: e.target.value })
                   }
-                  className="w-full px-4 py-2 border border-gray-200  focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="w-full px-4 py-2 border border-gray-200  focus:outline-none focus:ring-1 focus:ring-[#001beb]"
                 />
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                   <svg
@@ -146,13 +146,13 @@ const Register = () => {
                 onChange={(e) =>
                   setValue({ ...value, password: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-200  focus:outline-none focus:ring-1 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-200  focus:outline-none focus:ring-1 focus:ring-[#001beb]"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold "
+              className="w-full py-2 bg-[#001beb] hover:bg-blue-700 text-white font-semibold "
             >
               Sign up
             </button>
@@ -161,7 +161,7 @@ const Register = () => {
           <div className="mt-4 text-center">
             <p className="text-gray-600">
               Already have an account?{" "}
-              <Link to={"/login"} className="text-blue-600 hover:underline">
+              <Link to={"/login"} className="text-[#001beb] hover:underline">
                 Sign in
               </Link>
             </p>

@@ -75,7 +75,7 @@ const Addpost = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Enter post title"
-              className="w-full px-3 py-2 border  border-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-600"
+              className="w-full px-3 py-2 border  border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#001beb]"
             />
           </div>
 
@@ -94,12 +94,12 @@ const Addpost = () => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Write your post description here"
-              className="w-full px-3 py-2 border  border-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-600"
+              className="w-full px-3 py-2 border  border-gray-200 focus:outline-none focus:ring-1 focus:ring[#001beb]"
               rows="4"
             /> */}
           </div>
 
-          <button className="w-full bg-blue-600 text-white py-2  font-medium hover:bg-blue-700">
+          <button className="w-full bg-[#001beb] text-white py-2  font-medium hover:bg-blue-700">
             Submit
           </button>
         </form>

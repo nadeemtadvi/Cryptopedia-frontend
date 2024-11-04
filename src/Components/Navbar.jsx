@@ -56,7 +56,7 @@ const handleToggle = () => {
         <div>
           {!user ? (
             <Link to={"/login"}>
-              <button className="p-[5px_28px_6px]    bg-indigo-700  text-white font-semibold ">
+              <button className="p-[5px_28px_6px]    bg-[#001beb]  text-white font-semibold ">
                 Sign in
               </button>
             </Link>
