@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import RecentPost from "../Components/RecentPost";
+import Loading from "../Components/Loading";
 
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");

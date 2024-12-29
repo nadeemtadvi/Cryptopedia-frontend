@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { BaseUrl, get } from "../services/Endpoint";
 import { useSelector } from "react-redux";
 import defaulimg from "../assets/CryptoImg/6244967.jpg";
+import Loading from "./Loading";
 
 const RecentPost = ({searchQuery}) => {
   const navigate = useNavigate();
@@ -111,7 +112,7 @@ console.log("filteredPosts",filteredPosts);
                 </div>
               </div>
             );
-          })) : (<p>No post Found</p>)}
+          })) : (<Loading/>)}
       </div>
     </div>
   );
