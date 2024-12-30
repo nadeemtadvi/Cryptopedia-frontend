@@ -110,8 +110,8 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
                   className="z-10  absolute translate-x-[-122px] translate-y-[26px] bg-white divide-y divide-gray-100  shadow w-44 "
                 >
                   <div className="px-4 py-3 text-[18px] text-gray-900 dark:text-white">
-                    <div>{user.FullName}</div>
-                    <div className="font-medium truncate">{user.email}</div>
+                    <div className="text-gray-700">{user.FullName}</div>
+                    <div className="font-medium truncate text-gray-700">{user.email}</div>
                   </div>
                   <ul
                     className="py-2 text-[18px] text-gray-700 dark:text-gray-200"
@@ -130,16 +130,16 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
                         {toggleDrop && (
                           <div className=" px-4 py-2 text-gray-700">
                             <ul>
-                              <li className="py-1 border-b border-gray-200 dark:text-gray-200 hover:bg-gray-100 ">
+                              <li className="py-1 border-b text-gray-700 border-gray-200 dark:text-gray-200 hover:bg-gray-100 ">
                                 <Link to={"/dashboard"}>Dashboard</Link>{" "}
                               </li>
-                              <li className="py-1 border-b border-gray-200 dark:text-gray-200 hover:bg-gray-100">
+                              <li className="py-1 border-b text-gray-700 border-gray-200 dark:text-gray-200 hover:bg-gray-100">
                                 <Link to={"/dashboard/addpost"}>Add Post</Link>{" "}
                               </li>
-                              <li className="py-1 border-b border-gray-200 dark:text-gray-200 hover:bg-gray-100">
+                              <li className="py-1 border-b text-gray-700 border-gray-200 dark:text-gray-200 hover:bg-gray-100">
                                 <Link to={"/dashboard/user"}>All User</Link>{" "}
                               </li>
-                              <li className="py-1 border-b border-gray-200 dark:text-gray-200 hover:bg-gray-100">
+                              <li className="py-1 border-b text-gray-700 border-gray-200 dark:text-gray-200 hover:bg-gray-100">
                                 <Link to={"/dashboard/allpost"}>All Post</Link>{" "}
                               </li>
                             </ul>
@@ -153,7 +153,7 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
                     <li>
                       <Link
                         to={`/profile/${id}`}
-                        className="block px-4 py-2 hover:bg-gray-100 "
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100 "
                       >
                         Profile
                       </Link>
