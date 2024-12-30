@@ -59,11 +59,11 @@ const Register = () => {
       {" "}
       <div className="sm:grid grid-cols-2 pb-10">
         <div className="sm:ml-14 sm:mr-10 px-3 py-6 sm:p-6">
-          <h2 className="text-2xl text-center sm:text-start font-semibold  text-gray-800 mb-4">
+          <h2 className="text-[26px] text-center sm:text-start font-semibold  text-gray-800 mb-4">
             Create an account
           </h2>
 
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="text-[20px] font-light">
             {/* Profile Picture placeholder */}
             <div className="mb-4">
               <div className="text-center sm:text-start">
@@ -80,7 +80,7 @@ const Register = () => {
               </div>
               <input
                 type="file"
-                className="form-control d-none mt-4 text-[15.5px] w-[-webkit-fill-available] text-gray-900 border border-gray-200  cursor-pointer bg-gray-50" // Hide the file input
+                className="form-control d-none mt-4  w-[-webkit-fill-available] text-gray-900 border border-gray-200  cursor-pointer bg-gray-50" // Hide the file input
                 id="image"
                 placeholder="Upload image"
                 accept="image/*"
@@ -152,13 +152,13 @@ const Register = () => {
 
             <button
               type="submit"
-              className="w-full py-2 bg-[#001beb] hover:bg-blue-700 text-white font-semibold "
+              className="w-full py-2 bg-[#001beb] hover:bg-blue-700 text-white font-light "
             >
               Sign up
             </button>
           </form>
 
-          <div className="mt-4 text-center">
+          <div className="mt-4 text-center text-[18px]">
             <p className="text-gray-600">
               Already have an account?{" "}
               <Link to={"/login"} className="text-[#001beb] hover:underline">

@@ -46,11 +46,11 @@ const dispatch=useDispatch()
           {/* Logo */}
        
 
-          <h2 className="text-2xl font-semibold  text-gray-800 mb-4">
+          <h2 className="text-[26px] font-semibold  text-gray-800 mb-4">
             Sign in 
           </h2>
 
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="text-[20px] font-light">
             <div className="mb-4">
              
               <div className="relative">
@@ -97,13 +97,13 @@ const dispatch=useDispatch()
 
             <button
               type="submit"
-              className="w-full py-2 bg-[#001beb] hover:bg-blue-700 text-white font-semibold "
+              className="w-full py-2 bg-[#001beb] hover:bg-blue-700 text-white font-light "
             >
               Sign in
             </button>
           </form>
 
-          <div className="mt-4 text-center">
+          <div className="mt-4 text-center text-[18px]">
             <p className="text-gray-600">
               Don't have an account yet?{" "}
               <Link to={"/register"} className="text-[#001beb] hover:underline">
