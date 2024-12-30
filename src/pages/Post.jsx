@@ -61,25 +61,23 @@ useEffect(() => {
     <div className="max-w-screen-2xl mx-auto ">
       <div className="mt-[4rem]  text-black">
         <div className=" p-2 sm:p-0 sm:max-w-[70%] mx-auto mt-[1rem]">
-        <h3 className="text-[1.42rem] mb-3 sm:text-[2rem] font-medium">{onPosts && onPosts?.title}</h3>
+        <h3 className="text-[36px] mb-3  font-medium">{onPosts && onPosts?.title}</h3>
           <div className="blog-cover  overflow-hidden  sm:h-[386px] w-full">
             <img
-              // src="https://img.freepik.com/free-photo/monstera-plant-green-pot_53876-145188.jpg?t=st=1729632583~exp=1729636183~hmac=8c19e3b3dd239db1617b974e750a5530dcfa025592b4f55971a62b54ca1ca5fc&w=740"
              src={onPosts && `${BaseUrl}/images/${onPosts.image}`}
               alt=""
               className="object-fill w-full"
             />
           </div>
           <div className="my-[1rem]">
-          <div className="text-[1.3rem] font-normal" dangerouslySetInnerHTML={{ __html: onPosts?.desc }}></div>
-            {/* <h5 >            {onPosts && onPosts.desc}            </h5> */}
+          <div className="text-[23px] font-light" dangerouslySetInnerHTML={{ __html: onPosts?.desc }}></div>
           </div>
           <hr />
           <div className="my-[1rem]">
-            <h5 className="text-[1.25rem] sm:text-[1.6rem] mb-3 font-medium">Leave a comment</h5>
-            <form className="" action="" >
+            <h5 className="text-[1.9rem]  mb-3 font-medium">Leave a comment</h5>
+            <form className="text-[23px] font-light" action="" >
               <div>
-                <div>
+                <div >
                   <label htmlFor="">Comment</label>
                 </div>
 
@@ -96,13 +94,12 @@ useEffect(() => {
               <button
                 type="submit"
                 onClick={onSubmitComment}
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#001beb]  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-[#001beb] dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="inline-flex items-center px-3 py-2 text-[23px] font-light text-center text-white bg-[#001beb]  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-[#001beb] dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 Submit Comment
               </button>
             </form>
             <hr className="my-5" />
-            <h5 className="text-[1.25rem] sm:text-[1.6rem] mb-3 font-medium">comments</h5>
             {onPosts && onPosts.comments.map((comment) => {
               return(
                 <div className="my-3">

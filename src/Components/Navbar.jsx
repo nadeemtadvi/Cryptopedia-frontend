@@ -44,7 +44,7 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
           </Link>
         </div>
        
-        <div className="flex items-center gap-2 md:gap-10">
+        <div className="flex items-center justify-between md:justify-normal md:gap-10">
         <div className="">
           <form className="my-4 sm:my-0 max-w-screen-md">
             <div className="relative">
@@ -68,7 +68,7 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
               <input
                 type="search"
                 id="default-search"
-                className="block w-full p-2 ps-10 text-sm text-gray-900 border-b border-gray-200  focus:ring-[#001beb] focus:border-[#001beb] outline-none"
+                className="block w-full p-2 ps-10 text-[18px] font-light text-gray-900 border-b border-gray-200  focus:ring-[#001beb] focus:border-[#001beb] outline-none"
                 placeholder="Search"
                 required=""
                 value={searchQuery}
@@ -80,7 +80,7 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
 
           {!user ? (
             <Link to={"/login"}>
-              <button className="p-[5px_8px_6px] md:p-[5px_28px_6px]  border border-[#001beb]  bg-[#001beb]  text-white font-normal ">
+              <button className="p-[5px_8px_6px] md:p-[5px_28px_6px]  border border-[#001beb]  bg-[#001beb]  text-white text-[18px] font-light ">
                 Sign in
               </button>
             </Link>

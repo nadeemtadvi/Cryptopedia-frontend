@@ -60,17 +60,17 @@ console.log("filteredPosts",filteredPosts);
                   </a>
                 </div>
                 <div className="">
-                  <button className="mt-3  font-medium text-[15px] text-orange-600  ">
+                  <button className="mt-3  font-medium text-[18px] text-orange-600  ">
                     Crypto Coin
                   </button>
                   <div
                     onClick={() => handleNavigate(post._id)}
                     className="flex justify-between items-center  hover:text-blue-700 cursor-pointer"
                   >
-                    <h5 className="mb-1 text-[23px] font-semibold tracking-tight text-gray-900 hover:text-gray-400">
+                    <h5 className="mb-1 text-[26px] font-semibold tracking-tight text-gray-900 hover:text-gray-400">
                       {post.title}
                     </h5>
-                    <span className="flex items-center text-blue-700 hover:text-gray-400">
+                    <span className="flex items-center text-[18px] text-blue-700 hover:text-gray-400">
                       <span>Read more</span>
                     <svg
                       className="rotate-[-30deg] w-3.5 h-3.5 ms-2"
@@ -91,10 +91,10 @@ console.log("filteredPosts",filteredPosts);
                   </div>
                   <div
                     dangerouslySetInnerHTML={{ __html: post?.desc }}
-                    className="mb-1 font-normal text-gray-700 dark:text-gray-400 text-ellips"
+                    className="mb-1 font-light text-[23px] text-gray-700 dark:text-gray-400 text-ellips"
                   ></div>
                 </div>
-                <div className="my-3 grid grid-cols-[40px_auto] gap-2">
+                <div className="my-3 grid grid-cols-[40px_auto] gap-2 pt-4">
                   <div className="">
                     <div className=" w-[40px] h-[40px] ">
                       <img
@@ -105,10 +105,10 @@ console.log("filteredPosts",filteredPosts);
                     </div>
                   </div>
                   <div className="self-center">
-                    <h3 className="text-[13px] font-medium text-black">
+                    <h3 className="text-[18px] font-medium text-black">
                       {user?.FullName || "NA"}
                     </h3>
-                    <h3 className="text-gray-600 text-[12px] ">
+                    <h3 className="text-gray-600 text-[16px] ">
                       {formattedDate}
                     </h3>
                   </div>

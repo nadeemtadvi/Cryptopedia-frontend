@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <div className="max-w-screen-2xl mx-auto border-t border-gray-200">
     <div className="p-1.5 sm:p-5 flex justify-between items-center">
-      <h4 className="text-[0.65rem] sm:text-[0.8rem] text-subtext">@ 2024 All Rights Reserved</h4>
-      <h4 className="text-[0.65rem] sm:text-[0.8rem] text-subtext">Designed by Nadeem</h4>
+      <h4 className="text-[16px] text-subtext">@ 2024 All Rights Reserved</h4>
+      <h4 className="text-[16px] text-subtext">Designed by Nadeem</h4>
       <div className=" footer-icon flex-wrap flex justify-between items-center gap-1 sm:gap-5">
         <img
         src={insta}

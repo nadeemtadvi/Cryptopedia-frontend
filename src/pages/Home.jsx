@@ -7,7 +7,7 @@ const Home = ({searchQuery}) => {
       <div className="max-w-screen-2xl mx-auto ">
         <div className="p-2 sm:p-0 sm:max-w-[85%] mx-auto ">
         <div className="sm:flex justify-between items-center">
-          <div className="my-5 sm:my-10 text-center  text-[1.25rem] sm:text-[1.6rem] text-black font-medium">
+          <div className="my-5 sm:my-10 text-center  text-[1.9rem]  text-black font-medium">
             <span className="border-b border-orange-500 py-2 px-3">
               Latest Post
             </span>
