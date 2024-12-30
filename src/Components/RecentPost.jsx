@@ -53,7 +53,7 @@ console.log("filteredPosts",filteredPosts);
                 <div className="  ">
                   <a href="#">
                     <img
-                      className=" h-[300px] md:h-[240px] w-full object-fit "
+                      className=" h-[300px] sm:h-[240px] w-full object-fit "
                       src={`${BaseUrl}/images/${post.image}`}
                       alt=""
                     />

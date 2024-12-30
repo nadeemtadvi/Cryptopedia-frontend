@@ -93,7 +93,9 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
                 data-dropdown-toggle="userDropdown"
                 data-dropdown-placement="bottom-start"
                 className="w-9 h-9 sm:w-12 sm:h-12 rounded-full cursor-pointer object-cover"
-                src={`${BaseUrl}/images/${user.profile}` || `https://placehold.co/800@3x.png`}
+                // src={`${BaseUrl}/images/${user.profile}` || `https://placehold.co/800@3x.png`}
+                src={user?.profile ? `${BaseUrl}/images/${user.profile}` : `https://placehold.co/800x800`}
+
                 alt="User dropdown"
               />
               {toggle && (
@@ -101,12 +103,12 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
                   id="userDropdown"
                   className="z-10  absolute translate-x-[-122px] translate-y-[26px] bg-white divide-y divide-gray-100  shadow w-44 "
                 >
-                  <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                  <div className="px-4 py-3 text-[18px] text-gray-900 dark:text-white">
                     <div>{user.FullName}</div>
                     <div className="font-medium truncate">{user.email}</div>
                   </div>
                   <ul
-                    className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                    className="py-2 text-[18px] text-gray-700 dark:text-gray-200"
                     aria-labelledby="avatarButton"
                   >
                     {/* {console.log('role',user.role)} */}
@@ -135,7 +137,7 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
                   <div className="py-1">
                     <Link
                       onClick={handleLogout}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
+                      className="block px-4 py-2 text-[18px] text-gray-700 hover:bg-gray-100 "
                     >
                       Sign out
                     </Link>

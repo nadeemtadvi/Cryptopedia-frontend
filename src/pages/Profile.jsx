@@ -49,10 +49,10 @@ const Profile = () => {
   return (
     <div className="mt-[3rem] sm:mt-0 sm:flex items-center justify-center min-h-screen max-w-screen-2xl mx-auto">
       <div className="border border-gray-200 p-2 mx-2 sm:mx-0 sm:p-6 shadow-md sm:w-96">
-        <h2 className="text-2xl font-semibold text-center text-black mb-4">
+        <h2 className="text-[26px] font-semibold text-center text-black mb-4">
           Update Profile
         </h2>
-        <form onSubmit={handleUpdateProfile}>
+        <form onSubmit={handleUpdateProfile} className="text-[20px] font-light">
           <div className="mb-4">
             <div className="p-3 flex justify-center">
               {profileImage ? (
@@ -107,7 +107,7 @@ const Profile = () => {
           </div>
           <button
             type="submit"
-            className="w-full py-2 text-lg bg-[#001beb] hover:bg-blue-700 text-white font-semibold "
+            className="w-full py-2 text-[20px] bg-[#001beb] hover:bg-blue-700 text-white font-light "
           >
             Update Profile
           </button>

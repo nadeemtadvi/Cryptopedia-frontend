@@ -11,7 +11,7 @@ const Sidebar = () => {
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 :bg-gray-800">
-          <ul className="space-y-2 font-medium">
+          <ul className="space-y-2 font-light text-[20px]">
             <li>
               <Link
                 to={"/dashboard"}

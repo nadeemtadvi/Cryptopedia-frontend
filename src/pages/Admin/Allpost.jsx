@@ -55,17 +55,17 @@ const Allpost = () => {
                 <img
                   src={`${BaseUrl}/images/${item.image}`}
                   alt="Blog"
-                  className="w-full h-[160px] sm:h-[200px] object-fit "
+                  className="w-full h-[300px] sm:h-[240px] object-fit "
                 />
                 <div className="mt-2 sm:mt-0 sm:py-2">
-                  <h3 className="text-[18px] font-semibold text-gray-900">
+                  <h3 className="text-[26px] font-semibold text-gray-900">
                     {item.title}
                   </h3>
-                  <div className="text-gray-700 text-[16px] mb-4 text-ellips" dangerouslySetInnerHTML={{ __html: item?.desc }}></div>
-                  <div className="flex justify-between">
+                  <div className="text-gray-700 font-light text-[23px] mb-6 text-ellips" dangerouslySetInnerHTML={{ __html: item?.desc }}></div>
+                  <div className="flex justify-between font-light text-[23px]">
                     <button
                       onClick={() => handleDelete(item._id)}
-                      className="bg-[#E4003A] hover:bg-red-700 text-white p-[3px_16px_4px]  flex items-center"
+                       className="bg-[#E4003A] hover:bg-red-700 text-white p-[3px_16px_4px]  flex items-center"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ const Allpost = () => {
                     </button>
                     <button
                       onClick={() => handleUpdate(item._id)}
-                      className="bg-[#FFB200] hover:bg-[#ffc53e] text-white font-semibold p-[3px_16px_4px]  flex items-center"
+                      className="bg-[#FFB200] hover:bg-[#ffc53e] text-white  p-[3px_16px_4px]  flex items-center"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

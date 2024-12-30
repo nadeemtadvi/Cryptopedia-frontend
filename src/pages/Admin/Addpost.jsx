@@ -47,9 +47,9 @@ const Addpost = () => {
       <div className="flex justify-center items-center ">
         <form
           onSubmit={handleSubmit}
-          className="w-full  bg-white  border border-gray-200 shadow-md p-2 sm:p-4"
+          className="w-full text-[20px] font-light bg-white  border border-gray-200 shadow-md p-2 sm:p-4"
         >
-          <h2 className="text-xl font-medium text-center text-black mb-4">
+          <h2 className="text-[26px] font-medium text-center text-black mb-4">
             Add New Post
           </h2>
 
@@ -99,7 +99,7 @@ const Addpost = () => {
             /> */}
           </div>
 
-          <button className="w-full bg-[#001beb] text-white py-2  font-medium hover:bg-blue-700">
+          <button className="w-full bg-[#001beb] text-white py-2  font-light hover:bg-blue-700">
             Submit
           </button>
         </form>

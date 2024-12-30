@@ -45,11 +45,11 @@ const User = () => {
     <div>
       <div className="flex justify-center items-center mt-4">
         <div className="w-full max-w-4xl">
-          <h4 className="text-[1.5rem] mb-4"><span className="py-1 px-1 border-b-2 border-sky-600">User</span></h4>
+          <h4 className="text-[26px] mb-4"><span className="py-1 px-1 border-b-2 border-sky-600">User</span></h4>
 
-          <table className="w-full text-left">
+          <table className="w-full text-left text-[20px] font-light">
             <thead>
-              <tr className=" text-black !font-medium border-b border-gray-200">
+              <tr className=" text-black !font-normal border-b border-gray-200">
                 <th className="px-4 py-2">#</th>
                 <th className="px-4 py-2">Name</th>
                 <th className="px-4 py-2">Role</th>
