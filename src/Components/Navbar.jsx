@@ -6,13 +6,17 @@ import { removeUser } from "../redux/AuthSlice";
 import toast from "react-hot-toast";
 import { HiMenu } from "react-icons/hi";
 import { navbar } from "../Constant/constants";
+import { IoIosArrowDown } from "react-icons/io";
 
 const Navbar = ({ setSearchQuery, searchQuery }) => {
   const { id } = useParams();
   const user = useSelector((state) => state.auth.user);
   const navigate = useNavigate();
   const [toggle, setToggle] = useState(false);
-
+  const [toggleDrop, setToggleDrop] = useState(false);
+  const handleToggleDrop = () => {
+    setToggleDrop((prev) => !prev);
+  };
   const handleToggle = () => {
     setToggle((prev) => !prev);
   };
@@ -35,7 +39,6 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
     <div className="max-w-screen-2xl mx-auto bg-white p-2 sm:p-4">
       <div className="md:flex justify-between items-center">
         <div className="flex sm:block items-center gap-2">
-         
           <Link to={"/"}>
             <div className="text-black font-bold text-[1.5rem] uppercase">
               <span className="text-[#EB5B00]">{navbar.NAV_LOGO}</span>
@@ -43,40 +46,40 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
             </div>
           </Link>
         </div>
-       
+
         <div className="flex items-center justify-between md:justify-normal md:gap-10">
-        <div className="">
-          <form className="my-4 sm:my-0 max-w-screen-md">
-            <div className="relative">
-              <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                <svg
-                  className="w-4 h-4 text-gray-500 dark:text-gray-400"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                  />
-                </svg>
+          <div className="">
+            <form className="my-4 sm:my-0 max-w-screen-md">
+              <div className="relative">
+                <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg
+                    className="w-4 h-4 text-gray-500 dark:text-gray-400"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  id="default-search"
+                  className="block w-full p-2 ps-10 text-[18px] font-light text-gray-900 border-b border-gray-200  focus:ring-[#001beb] focus:border-[#001beb] outline-none"
+                  placeholder="Search"
+                  required=""
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
               </div>
-              <input
-                type="search"
-                id="default-search"
-                className="block w-full p-2 ps-10 text-[18px] font-light text-gray-900 border-b border-gray-200  focus:ring-[#001beb] focus:border-[#001beb] outline-none"
-                placeholder="Search"
-                required=""
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-            </div>
-          </form>
-        </div>
+            </form>
+          </div>
 
           {!user ? (
             <Link to={"/login"}>
@@ -94,8 +97,11 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
                 data-dropdown-placement="bottom-start"
                 className="w-9 h-9 sm:w-12 sm:h-12 rounded-full cursor-pointer object-cover"
                 // src={`${BaseUrl}/images/${user.profile}` || `https://placehold.co/800@3x.png`}
-                src={user?.profile ? `${BaseUrl}/images/${user.profile}` : `https://placehold.co/800x800`}
-
+                src={
+                  user?.profile
+                    ? `${BaseUrl}/images/${user.profile}`
+                    : `https://placehold.co/800x800`
+                }
                 alt="User dropdown"
               />
               {toggle && (
@@ -114,12 +120,31 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
                     {/* {console.log('role',user.role)} */}
                     {user.role == "admin" ? (
                       <li>
-                        <Link
-                          to={"/dashboard"}
-                          className="block px-4 py-2 hover:bg-gray-100 "
+                        <div
+                          onClick={() => handleToggleDrop()}
+                          className=" px-4 py-2 hover:bg-gray-100  flex justify-between items-center"
                         >
-                          Dashboard
-                        </Link>
+                          <span>Admin</span>
+                          <IoIosArrowDown />
+                        </div>
+                        {toggleDrop && (
+                          <div className=" px-4 py-2">
+                            <ul>
+                              <li className="py-1 border-b border-gray-200 dark:text-gray-200 hover:bg-gray-100 ">
+                                <Link to={"/dashboard"}>Dashboard</Link>{" "}
+                              </li>
+                              <li className="py-1 border-b border-gray-200 dark:text-gray-200 hover:bg-gray-100">
+                                <Link to={"/dashboard/addpost"}>Add Post</Link>{" "}
+                              </li>
+                              <li className="py-1 border-b border-gray-200 dark:text-gray-200 hover:bg-gray-100">
+                                <Link to={"/dashboard/user"}>All User</Link>{" "}
+                              </li>
+                              <li className="py-1 border-b border-gray-200 dark:text-gray-200 hover:bg-gray-100">
+                                <Link to={"/dashboard/allpost"}>All Post</Link>{" "}
+                              </li>
+                            </ul>
+                          </div>
+                        )}
                       </li>
                     ) : (
                       ""
@@ -146,7 +171,6 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
               )}
             </div>
           )}
-          {/* */}
         </div>
       </div>
     </div>
