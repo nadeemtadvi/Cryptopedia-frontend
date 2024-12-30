@@ -5,14 +5,14 @@ import { useSelector } from "react-redux";
 import defaulimg from "../assets/CryptoImg/6244967.jpg";
 import Loading from "./Loading";
 
-const RecentPost = ({searchQuery}) => {
+const RecentPost = ({searchQuery = ""}) => {
   const navigate = useNavigate();
   const [post, setPost] = useState([]);
   const user = useSelector((state) => state.auth.user);
-  
   const filteredPosts = post.filter((p) =>
-    p.title.toLowerCase().includes(searchQuery.toLowerCase())
+    p.title?.toLowerCase().includes(searchQuery.toLowerCase())
   );
+  
 console.log("filteredPosts",filteredPosts);
 
   const formattedDate =  user?.createdAt 
@@ -48,12 +48,12 @@ console.log("filteredPosts",filteredPosts);
             return (
               <div
                 key={index}
-                className={`${searchQuery ? 'md:w-[400px]':''} bg-white border border-gray-200  p-2 sm:p-2.5 `}
+                className={`${searchQuery ? 'md:w-[400px]':''} border border-gray-200  p-2 sm:p-2.5 `}
               >
                 <div className="  ">
                   <a href="#">
                     <img
-                      className=" h-[160px] sm:h-[200px] w-full object-fit "
+                      className=" h-[300px] md:h-[240px] w-full object-fit "
                       src={`${BaseUrl}/images/${post.image}`}
                       alt=""
                     />
@@ -65,11 +65,13 @@ console.log("filteredPosts",filteredPosts);
                   </button>
                   <div
                     onClick={() => handleNavigate(post._id)}
-                    className="flex justify-between items-center  hover:text-blue-800 cursor-pointer"
+                    className="flex justify-between items-center  hover:text-blue-700 cursor-pointer"
                   >
-                    <h5 className="mb-1 text-[23px] font-semibold tracking-tight text-gray-900 hover:text-blue-800">
+                    <h5 className="mb-1 text-[23px] font-semibold tracking-tight text-gray-900 hover:text-gray-400">
                       {post.title}
                     </h5>
+                    <span className="flex items-center text-blue-700 hover:text-gray-400">
+                      <span>Read more</span>
                     <svg
                       className="rotate-[-30deg] w-3.5 h-3.5 ms-2"
                       aria-hidden="true"
@@ -85,6 +87,7 @@ console.log("filteredPosts",filteredPosts);
                         d="M1 5h12m0 0L9 1m4 4L9 9"
                       />
                     </svg>
+                    </span>
                   </div>
                   <div
                     dangerouslySetInnerHTML={{ __html: post?.desc }}

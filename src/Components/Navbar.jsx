@@ -7,15 +7,15 @@ import toast from "react-hot-toast";
 import { HiMenu } from "react-icons/hi";
 import { navbar } from "../Constant/constants";
 
-const Navbar = () => {
-  const {id} = useParams()
+const Navbar = ({ setSearchQuery, searchQuery }) => {
+  const { id } = useParams();
   const user = useSelector((state) => state.auth.user);
   const navigate = useNavigate();
-const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
 
-const handleToggle = () => {
-  setToggle((prev) => !prev)
-}
+  const handleToggle = () => {
+    setToggle((prev) => !prev);
+  };
 
   const handleLogout = async () => {
     try {
@@ -33,37 +33,61 @@ const handleToggle = () => {
   };
   return (
     <div className="max-w-screen-2xl mx-auto bg-white p-2 sm:p-4">
-      <div className="flex justify-between items-center">
+      <div className="md:flex justify-between items-center">
         <div className="flex sm:block items-center gap-2">
-          <div className="sm:hidden block">
-            <HiMenu className="text-[27px]"/>
-          </div>
+         
           <Link to={"/"}>
             <div className="text-black font-bold text-[1.5rem] uppercase">
-              <span className="text-[#EB5B00]">{navbar.NAV_LOGO}</span><span className="text-[#FFB200]">{navbar.NAV_LOGO_H}</span>
+              <span className="text-[#EB5B00]">{navbar.NAV_LOGO}</span>
+              <span className="text-[#FFB200]">{navbar.NAV_LOGO_H}</span>
             </div>
           </Link>
         </div>
-        <div className="hidden sm:block">
-          <ul className="flex justify-between items-center gap-8 text-black">
-            {navbar.NAVITEMS.map((item, index) => (
-              <li key={index}>
-                <Link to={item.link}>{item.label}</Link>
-              </li>
-            ))}
-          </ul>
+       
+        <div className="flex items-center gap-2 md:gap-10">
+        <div className="">
+          <form className="my-4 sm:my-0 max-w-screen-md">
+            <div className="relative">
+              <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg
+                  className="w-4 h-4 text-gray-500 dark:text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+              <input
+                type="search"
+                id="default-search"
+                className="block w-full p-2 ps-10 text-sm text-gray-900 border-b border-gray-200  focus:ring-[#001beb] focus:border-[#001beb] outline-none"
+                placeholder="Search"
+                required=""
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+          </form>
         </div>
-        <div>
+
           {!user ? (
             <Link to={"/login"}>
-              <button className="p-[5px_28px_6px]    bg-[#001beb]  text-white font-semibold ">
+              <button className="p-[5px_8px_6px] md:p-[5px_28px_6px]  border border-[#001beb]  bg-[#001beb]  text-white font-normal ">
                 Sign in
               </button>
             </Link>
           ) : (
             <div className="Avatars relative">
               <img
-              onClick={handleToggle}
+                onClick={handleToggle}
                 id="avatarButton"
                 type="button"
                 data-dropdown-toggle="userDropdown"
@@ -72,51 +96,52 @@ const handleToggle = () => {
                 src={`${BaseUrl}/images/${user.profile}`}
                 alt="User dropdown"
               />
-              {toggle && 
-              <div
-                id="userDropdown"
-                className="z-10  absolute translate-x-[-122px] translate-y-[26px] bg-white divide-y divide-gray-100  shadow w-44 "
-              >
-                <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
-                  <div>{user.FullName}</div>
-                  <div className="font-medium truncate">{user.email}</div>
-                </div>
-                <ul
-                  className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                  aria-labelledby="avatarButton"
+              {toggle && (
+                <div
+                  id="userDropdown"
+                  className="z-10  absolute translate-x-[-122px] translate-y-[26px] bg-white divide-y divide-gray-100  shadow w-44 "
                 >
-                  {/* {console.log('role',user.role)} */}
-                  {user.role == "admin" ? (
+                  <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                    <div>{user.FullName}</div>
+                    <div className="font-medium truncate">{user.email}</div>
+                  </div>
+                  <ul
+                    className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                    aria-labelledby="avatarButton"
+                  >
+                    {/* {console.log('role',user.role)} */}
+                    {user.role == "admin" ? (
+                      <li>
+                        <Link
+                          to={"/dashboard"}
+                          className="block px-4 py-2 hover:bg-gray-100 "
+                        >
+                          Dashboard
+                        </Link>
+                      </li>
+                    ) : (
+                      ""
+                    )}
+
                     <li>
                       <Link
-                        to={"/dashboard"}
+                        to={`/profile/${id}`}
                         className="block px-4 py-2 hover:bg-gray-100 "
                       >
-                        Dashboard
+                        Profile
                       </Link>
                     </li>
-                  ) : (
-                    ""
-                  )}
-
-                  <li>
+                  </ul>
+                  <div className="py-1">
                     <Link
-                      to={`/profile/${id}`}
-                      className="block px-4 py-2 hover:bg-gray-100 "
+                      onClick={handleLogout}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
                     >
-                      Profile
+                      Sign out
                     </Link>
-                  </li>
-                </ul>
-                <div className="py-1">
-                  <Link
-                    onClick={handleLogout}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
-                  >
-                    Sign out
-                  </Link>
+                  </div>
                 </div>
-              </div>}
+              )}
             </div>
           )}
           {/* */}

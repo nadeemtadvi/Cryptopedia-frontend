@@ -15,6 +15,7 @@ import { Toaster } from "react-hot-toast";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
+import './App.css'
 
 function App() {
   return (
