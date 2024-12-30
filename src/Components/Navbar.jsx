@@ -122,13 +122,13 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
                       <li>
                         <div
                           onClick={() => handleToggleDrop()}
-                          className=" px-4 py-2 hover:bg-gray-100  flex justify-between items-center"
+                          className=" px-4 py-2 hover:bg-gray-100 text-gray-700 flex justify-between items-center"
                         >
                           <span>Admin</span>
                           <IoIosArrowDown />
                         </div>
                         {toggleDrop && (
-                          <div className=" px-4 py-2">
+                          <div className=" px-4 py-2 text-gray-700">
                             <ul>
                               <li className="py-1 border-b border-gray-200 dark:text-gray-200 hover:bg-gray-100 ">
                                 <Link to={"/dashboard"}>Dashboard</Link>{" "}
