@@ -18,7 +18,7 @@
   -webkit-line-clamp: 4;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: calc(4 * 32px);
+  height: calc(4 * 33px);
 }
 
 .tox:not(.tox-tinymce-inline) .tox-editor-header {
