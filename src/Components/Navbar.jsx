@@ -93,7 +93,7 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
                 data-dropdown-toggle="userDropdown"
                 data-dropdown-placement="bottom-start"
                 className="w-9 h-9 sm:w-12 sm:h-12 rounded-full cursor-pointer object-cover"
-                src={`${BaseUrl}/images/${user.profile}`}
+                src={`${BaseUrl}/images/${user.profile}` || `https://placehold.co/800@3x.png`}
                 alt="User dropdown"
               />
               {toggle && (
