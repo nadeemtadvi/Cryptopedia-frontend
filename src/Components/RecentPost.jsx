@@ -99,7 +99,7 @@ console.log("filteredPosts",filteredPosts);
                     <div className=" w-[40px] h-[40px] ">
                       <img
                         className="object-cover w-full h-full rounded-full"
-                        src={user?.profile ? `${BaseUrl}/images/${user.profile}` : defaulimg} 
+                        src={user?.profile ? `${BaseUrl}/images/${user.profile}` : `https://placehold.co/800@3x.png`} 
                         alt={user?.FullName || "User profile"}
                       />
                     </div>
